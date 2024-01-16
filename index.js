@@ -46,7 +46,7 @@ app.get("/dashboard", verifyUser, (req, res) => {
   res.json("Success");
 });
 
-app.post("/register", (req, res) => {
+app.post("/", (req, res) => {
   const { name, email, password } = req.body;
   bcrypt
     .hash(password, 10)
